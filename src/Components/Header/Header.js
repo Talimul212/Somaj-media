@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { FaUser, FaSearch } from 'react-icons/fa';
+import { FaUser, FaSearch,FaHome } from 'react-icons/fa';
 import { AuthContext } from '../../Context/AuthProvider';
 import logo from '../../assets/logo.webp'
 
@@ -12,7 +12,7 @@ const Header = () => {
             .carch();
     }
     const menuItems = <>
-        <li className='font-semibold mr-4 text-white'><Link to='/'>Home</Link></li>
+        <li className='font-semibold mr-4 text-white'><Link to='/'><FaHome className='text-2xl'></FaHome></Link></li>
         <li className='font-semibold mr-4 text-white'><Link to='/'>Media</Link></li>
         <li className='font-semibold mr-4 text-white'><Link to='/'>Message</Link></li>
         <li className='font-semibold mr-4 text-white'><Link to='/about'>About</Link></li>

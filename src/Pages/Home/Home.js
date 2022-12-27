@@ -1,11 +1,11 @@
 import { Button } from '@mui/material';
 import React from 'react';
+import Section1 from './HomeSection/Section1';
 
 const Home = () => {
     return (
         <div>
-            <h3>This is Home Page</h3>
-            <Button variant="contained">Hello World</Button>
+            <Section1></Section1>
         </div>
     );
 };
