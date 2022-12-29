@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
+import useToken from '../../hook/useToken';
 import { AuthContext } from '../../Context/AuthProvider';
 
 
@@ -12,21 +13,52 @@ const SignUp = () => {
     const { createUser, updateUser } = useContext(AuthContext);
     const [singUpError, setSignUpError] = useState('');
     const [createUserEmail, setCreateUserEmail] = useState('')
+    const [token] = useToken(createUserEmail);
     const navigate = useNavigate();
 
+    if (token) {
+        navigate('/');
+    } 
 
     const handleSignUp = (data) => {
         setSignUpError('');
         createUser(data.email, data.password)
-            .then(result => {
-                const user = result.user;
-                toast('User Created Successfully.')
-              
+        .then(result => {
+            const user = result.user;
+            toast('User Created Successfully.')
+            const userInfo = {
+                displayName: data.name,
+            }
+            console.log('====================================');
+            console.log(userInfo);
+            console.log('====================================');
+            updateUser(userInfo)
+                .then(() => {
+                    saveUser(data.name, data.email);
+                })
+                .catch(err => console.log(err));
+        })
+        .catch(error => {
+            console.log(error)
+            setSignUpError(error.message)
+        })
+
+    const saveUser = (name, email) => {
+        const role = 'seller'
+        const user = { name, email, role };
+        fetch('https://tech-com-server.vercel.app/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                setCreateUserEmail(email)
             })
-            .catch(error => {
-                console.log(error)
-                setSignUpError(error.message)
-            })
+    }
+
 
     }
 
@@ -62,7 +94,7 @@ const SignUp = () => {
                                 {errors.password && <p className='text-red-600'>{errors.password.message}</p>}
 
                             </div>
-                            <input type="submit" className=' btn btn-primary  bg-gradient-to-r from-primary  to-secondary my-2 text-white w-full' value='Sign Up as a seller' />
+                            <input type="submit" className=' btn btn-primary  bg-gradient-to-r from-primary  to-secondary my-2 text-white w-full' value='Sign Up ' />
                             <div>
                                 {singUpError && <p className='text-red-600'>{singUpError}</p>}
                             </div>
