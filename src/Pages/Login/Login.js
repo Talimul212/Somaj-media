@@ -16,6 +16,7 @@ const Login = () => {
     const navigate = useNavigate();
     const from = location.state?.form?.pathname || '/';
 
+    
     const handlerGoogleSingIn = () => {
         googleLogin()
             .then(result => {
@@ -34,6 +35,8 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, { replace: true });
+                navigate('/');
             })
             .catch(error => {
                 console.log(error.message)

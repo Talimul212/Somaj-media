@@ -65,8 +65,8 @@ const Header = () => {
                 {
                     user?.photoURL ?
                         <>
-                            <div className='flex gap-2'>
-                                <img className='h-8 rounded-full' src={user?.photoURL} alt=''></img>
+                            <div className='flex gap-2 '>
+                                <img className='h-8 rounded-full ' src={user?.photoURL} alt=''></img>
                                 <p className='text-lg font-semibold text-white'>{user?.displayName}</p>
                             </div>
                         </>
@@ -76,7 +76,7 @@ const Header = () => {
                             {
                                 user?.email ?
                                     <>
-                                        <div className=' bg-slate-200 p-2 rounded-full'>
+                                        <div className=' bg-slate-200 p-2 rounded-full avatar online'>
                                             <FaUser></FaUser>
                                         </div>
                                     </>

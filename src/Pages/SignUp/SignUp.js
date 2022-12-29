@@ -14,24 +14,26 @@ const SignUp = () => {
     const [singUpError, setSignUpError] = useState('');
     const [createUserEmail, setCreateUserEmail] = useState('')
     const [token] = useToken(createUserEmail);
+    const imageHostKey = process.env.REACT_APP_imgbbkey;
     const navigate = useNavigate();
 
     if (token) {
         navigate('/');
     } 
 
+
+
+
     const handleSignUp = (data) => {
         setSignUpError('');
         createUser(data.email, data.password)
         .then(result => {
             const user = result.user;
+            
             toast('User Created Successfully.')
             const userInfo = {
                 displayName: data.name,
             }
-            console.log('====================================');
-            console.log(userInfo);
-            console.log('====================================');
             updateUser(userInfo)
                 .then(() => {
                     saveUser(data.name, data.email);
