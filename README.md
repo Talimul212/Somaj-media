@@ -5,7 +5,7 @@ This website about social-media.You can create post by posting text and image an
 
 ### `Live link`
 
-Open [https://glistening-lolly-facd20.netlify.app/](https://glistening-lolly-facd20.netlify.app/) 
+Open [https://fascinating-cannoli-8b2e4a.netlify.app/](https://fascinating-cannoli-8b2e4a.netlify.app/) 
 
 ### `server-link`
 Open [https://github.com/Talimul212/somaj-media-server/](https://github.com/Talimul212/somaj-media-server) 
