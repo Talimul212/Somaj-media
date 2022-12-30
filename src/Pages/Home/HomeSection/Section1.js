@@ -51,7 +51,7 @@ const Section1= () => {
 
    
     return (
-        <div className='flex flex-row justify-center mt-8'>
+        <div className='flex flex-row justify-center mt-8 lg:mr-8'>
             <div className='w-96 p-7 shadow-lg rounded-xl'>
             <h2 className='text-3xl font-bold'>Create post</h2>
                 <form onSubmit={handleSubmit(handleAddDoctor)} >
@@ -74,7 +74,7 @@ const Section1= () => {
                         })} className="input input-bordered w-full max-w-xs" />
                         {errors.img && <p className='text-red-500'>{errors.img.message}</p>}
                     </div>
-                    <input type="submit" className='btn btn-primary  bg-gradient-to-r from-primary  to-secondary text-white w-full mt-4' value='Submit' />
+                    <input type="submit" className='btn btn-primary  bg-gradient-to-r from-primary  to-secondary text-white w-full mt-4' value='post' />
                     <div>
 
                     </div>

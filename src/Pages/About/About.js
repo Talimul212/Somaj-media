@@ -24,7 +24,7 @@ const About = () => {
   }, [user?.email])
 
 
-  const handleAddDoctor = data => {
+  const handleAddPost = data => {
     const image = data.image[0];
 
     const formData = new FormData();
@@ -63,7 +63,9 @@ const About = () => {
   }
 
   return (
-    <div className='flex justify-center mb-10'>
+    <div>
+      <h2 className='text-center mb-3 text-2xl' >please, click the edit button and filup your name, email, university and address</h2>
+      <div className='flex  justify-center mb-10'>
       <div className="w-96 bg-base-100 shadow-xl rounded-lg ">
         {
           info.map(infos=><InfoCard key={infos._id} infos={infos}></InfoCard>)
@@ -76,7 +78,7 @@ const About = () => {
             <div className="modal-box relative">
               <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
               <h2 className="text-center font-bold text-2xl">Your Information</h2>
-              <form onSubmit={handleSubmit(handleAddDoctor)} >
+              <form onSubmit={handleSubmit(handleAddPost)} >
                 <div className='lg:flex  gap-2'>
                   <div className="form-control w-full ">
                     <label className="label"> <span className="label-text font-bold">Name</span></label>
@@ -125,6 +127,8 @@ const About = () => {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 };
 

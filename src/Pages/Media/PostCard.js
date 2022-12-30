@@ -1,20 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaCommentAlt } from "react-icons/fa";
-import {addToDb} from'../../utilities/fakedb'
-const PostCard = ({ post, index }) => {
+const PostCard = ({ post, index}) => {
   const { _id, name, image, textarea } = post;
-  const [like,setLike]=useState('')
 
 
-const likes = localStorage.getItem('Total-likes');
-console.log(likes);
-  const handlerToLike=(select)=>{
-     addToDb(setLike(parseInt(1+select)));
-   
-     
-
-  }
   return (
     <div className="card card-compact bg-base-100 shadow-xl mb-8 mx-3 border-2">
      <div className='flex justify-between'>

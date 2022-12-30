@@ -15,20 +15,8 @@ const Header = () => {
         <li className='font-semibold mr-4 text-white'><Link to='/'><FaHome className='text-2xl'></FaHome></Link></li>
         <li className='font-semibold mr-4 text-white'><Link to='/media'>Media</Link></li>
         <li className='font-semibold mr-4 text-white'><Link to='/message'>Message</Link></li>
-        <li className='font-semibold mr-4 text-white'><Link to='/about'>About</Link></li>
-        {
-            user?.email ?
-                <>
-
-                    <li className='font-semibold  text-white' onClick={handleLogOut}><Link>Log Out</Link></li>
-                </>
-                :
-                <>
-                    <li className='font-semibold mr-4 text-white'><Link to='/login'>Login</Link></li>
-                    <li className='font-semibold text-white'><Link to='/signUp'>Sign Up</Link></li>
-
-                </>
-        }
+       
+        
     </>
 
     return (

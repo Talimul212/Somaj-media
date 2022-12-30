@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { addToDb, getStoredCart } from '../../utilities/fakedb';
 import PostCard from './PostCard';
 
 const Media = () => {
@@ -9,10 +10,11 @@ useEffect(()=>{
     .then(data=>setAllPosts(data))
 },[]);
 
-    return (
+
+return (
         <div className='grid lg:grid-cols-3'>
             {
-                allPosts.map((post,index)=><PostCard key={post._id} post={post} index={index}></PostCard>)
+                allPosts.map((post,index)=><PostCard key={post._id} post={post}  index={index}></PostCard>)
             }
         </div>
     );
