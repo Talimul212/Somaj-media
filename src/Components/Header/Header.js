@@ -14,9 +14,14 @@ const Header = () => {
     const menuItems = <>
         <li className='font-semibold mr-4 text-white'><Link to='/'><FaHome className='text-2xl'></FaHome></Link></li>
         <li className='font-semibold mr-4 text-white'><Link to='/media'>Media</Link></li>
-        <li className='font-semibold mr-4 text-white'><Link to='/message'>Message</Link></li>
-       
+        {
+            user?.email ?
+            <li className='font-semibold mr-4 text-white'><Link to='/message'>Message</Link>
+            <div class="badge ml-[-16px] border-0 bg-red-500 rounded-2xl">+99</div></li>:""
+        }
         
+
+
     </>
 
     return (

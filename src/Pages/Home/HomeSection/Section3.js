@@ -10,7 +10,7 @@ const Section3 = () => {
             .carch();
     }
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl mt-3">
             <div className="card-body">
                 {
                     user?.email ?

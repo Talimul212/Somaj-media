@@ -105,9 +105,9 @@ const SignUp = () => {
 
                     </div>
                     <div>
-                        <h1 className=" text-5xl font-bold text-blue-600">How it works
+                        <h1 className=" text-5xl font-bold text-blue-600">Somaj-Media
                         </h1>
-                        <p className="py-6 text-2xl font-semibold"></p>
+                        <p className="py-6 text-2xl font-semibold"><span className='text-4xl text-primary font-bold'>Somaj</span> helps you connect and share with the people in your life.</p>
                     </div>
                 </div>
             </div>

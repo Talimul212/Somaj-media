@@ -48,6 +48,12 @@ const Login = () => {
         <div className=' flex justify-center items-center'>
             <div className="hero rounded-lg mt-10" id='heroImg'>
                 <div className="hero-content flex-col lg:flex-row-reverse">
+                    
+                    <div className='w-full text-center'>
+                        <h1 className=" text-5xl font-bold text-blue-600">Somaj-Media
+                        </h1>
+                        <p className="py-6 text-2xl font-semibold"><span className='text-4xl text-primary font-bold'>Somaj</span> helps you connect and share with the people in your life.</p>
+                    </div>
                     <div className='w-full p-7 shadow-lg rounded-xl bg-white'>
                         <h2 className='text-2xl font-semibold text-center mb-6'>Login</h2>
 
@@ -82,12 +88,6 @@ const Login = () => {
                         <p className='font-bold text-center'>New to Tech.com? <Link to='/signup' className='text-secondary'>Create new account</Link></p>
                         <div className='divider'>OR</div>
                         <button onClick={handlerGoogleSingIn} className=' btn btn-primary  bg-gradient-to-r from-primary  to-secondary w-full'>CONTINUE WITH GOOGLE</button>
-                    </div>
-                    <div>
-                        <h1 className=" text-5xl font-bold text-blue-600">How it works
-                        </h1>
-                        <p className="py-6 text-2xl font-semibold"> </p>
-
                     </div>
                 </div>
             </div>
