@@ -33,7 +33,7 @@ const Section1= () => {
                 image: imgData.data.url
             }
               // save doctor information to the database
-              fetch('http://localhost:5000/allposts', {
+              fetch('https://somej-media-server.vercel.app/allposts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -51,8 +51,8 @@ const Section1= () => {
 
    
     return (
-        <div className='flex flex-row justify-center mt-8 lg:mr-8'>
-            <div className='w-96 p-7 shadow-lg rounded-xl'>
+        <div className='flex flex-row justify-center mt-8 lg:mr-8 '>
+            <div className='w-96 p-7 shadow-lg rounded-xl bg-white'>
             <h2 className='text-3xl font-bold'>Create post</h2>
                 <form onSubmit={handleSubmit(handleAddDoctor)} >
                     <div className="form-control w-full max-w-xs">

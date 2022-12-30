@@ -19,7 +19,7 @@ const Postdetails = () => {
     const { data: comments = [], refetch } = useQuery({
         queryKey: ['allcomments'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/allcomments/${_id}`)
+            const res = await fetch(`https://somej-media-server.vercel.app/allcomments/${_id}`)
             const data = await res.json();
             return data;
         }
@@ -44,7 +44,7 @@ const Postdetails = () => {
             post: data.comment,
         }
         // save doctor information to the database
-        fetch('http://localhost:5000/allcomments', {
+        fetch('https://somej-media-server.vercel.app/allcomments', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

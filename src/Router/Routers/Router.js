@@ -37,7 +37,7 @@ const router = createBrowserRouter([
     {
       path:'/details/:id',
       element:<PrivateRoute><Postdetails></Postdetails></PrivateRoute>,
-      loader:({params})=>fetch(`http://localhost:5000/allposts/${params.id}`)
+      loader:({params})=>fetch(`https://somej-media-server.vercel.app/allposts/${params.id}`)
     }, 
     {
       path:'/message',

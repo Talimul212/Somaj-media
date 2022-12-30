@@ -5,7 +5,7 @@ import PostCard from './PostCard';
 const Media = () => {
 const [allPosts,setAllPosts]=useState([]);
 useEffect(()=>{
-    fetch('http://localhost:5000/allposts')
+    fetch('https://somej-media-server.vercel.app/allposts')
    .then(res=>res.json())
     .then(data=>setAllPosts(data))
 },[]);

@@ -1,3 +1,16 @@
+
+### `Welcome to my github`
+
+This website about social-media.You can create post by posting text and image and you also can see other post  what other user postin in this site. 
+
+### `Live link`
+
+Open [https://glistening-lolly-facd20.netlify.app/](https://glistening-lolly-facd20.netlify.app/) 
+
+### `server-link`
+Open [https://github.com/Talimul212/somaj-media-server/](https://github.com/Talimul212/somaj-media-server) 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

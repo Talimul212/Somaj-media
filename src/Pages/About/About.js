@@ -16,7 +16,7 @@ const About = () => {
 
 
   useEffect(() => {
-    fetch(`  http://localhost:5000/users/${user?.email}`)
+    fetch(`  https://somej-media-server.vercel.app/users/${user?.email}`)
       .then(res => res.json())
       .then(data => {
         setInfo(data);
@@ -45,7 +45,7 @@ const About = () => {
             image: imgData.data.url
           }
           // save doctor information to the database
-          fetch('http://localhost:5000/users', {
+          fetch('https://somej-media-server.vercel.app/users', {
             method: 'POST',
             headers: {
               'content-type': 'application/json'
